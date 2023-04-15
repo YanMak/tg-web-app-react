@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
 
 import {useTelegram} from "./hooks/useTelegram";
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       work!!!
+      <Header/>
       <button onClick={()=>onClose()}>Закрыть</button>
     </div>
   );

@@ -19,9 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      work!!!
+      work!!!!
       <Header/>
-      <button onClick={()=>onClose()}>Закрыть</button>
     </div>
   );
 }

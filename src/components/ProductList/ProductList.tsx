@@ -74,6 +74,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <span>{JSON.stringify(addedItems)}</span>
             {products.map(item => (
                 <ProductItem
                     product={item}

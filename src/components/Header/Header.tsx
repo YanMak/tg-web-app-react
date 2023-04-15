@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <div className={'header'}>
         <Button onClick = {onClose} >Close</Button>
-        <span className={'username'}></span>
+        <span className={'username'}>{user}</span>
     </div>
   )
 }

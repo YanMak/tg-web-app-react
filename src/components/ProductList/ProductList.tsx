@@ -28,6 +28,20 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState<IProduct[]>([]);
     const {tg, queryId} = useTelegram();
 
+    const sendMessage = () => {
+        fetch('http://212.193.58.235:4201/incitysendertelegram/sendphoto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "chatId": "962936106", 
+                "message": "hallo from insomnia post query",
+                "photo": "https://wallpapershome.ru/images/pages/pic_h/17859.jpg"
+            })
+        })
+    }
+
     const onSendData = useCallback(() => {
         const data = {
             products: addedItems,
@@ -83,6 +97,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
+            <button onClick={sendMessage}>send message</button>
         </div>
     );
 };
